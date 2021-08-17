@@ -1,0 +1,41 @@
+mixin menuTop(props, titleTop = "", titleMega = "")
+  if titleTop
+    a(href="#")= titleTop
+  if titleMega
+    .menu-title= titleMega
+  ul
+    each val in props
+      +menuItem(val)
+
+mixin menuMega(props)
+  ul.menu.sf-arrows
+    each val in props
+      +menuMegaItem(val)
+
+mixin menuMegaItem(prop)
+  li
+    if prop.isMega
+      a.sf-with-ul(href=`${prop.href}`) #{ prop.anchor }
+      .mega__menu
+        .row.no-gutters
+          .col-md-8
+            .menu-col
+              .row
+                each val in prop.megaMenu
+                  +menuMegaItemPlus(val)
+          .col-md-4
+            a(href="#") 
+              img(src="../images/deposit-photos.jpg", alt="Banner")
+    else
+      a(href=`${prop.href}`) #{ prop.anchor }
+
+mixin menuMegaItemPlus(prop)
+  .col-md-4
+    .menu-title #{ prop.title }
+    ul
+      each item in prop.data
+        +menuItem(item)
+
+mixin menuItem({href, anchor})
+  li
+    a(href=`${href}`) #{ anchor }

@@ -31,6 +31,7 @@
     "static-server": "^3.0.0"
   },
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.16.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -48,6 +49,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
+    "prettier": "^2.3.2",
     "pump": "^3.0.0",
     "run-sequence": "^2.2.1"
   }

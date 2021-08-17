@@ -1,0 +1,29 @@
+header.header
+  .header__slider
+    #slider-intro.carousel.slide(data-ride="carousel")
+      +headerTop
+
+      ol.carousel-indicators
+        li.active(data-target="#slider-intro", data-slide-to="0")
+        li(data-target="#slider-intro", data-slide-to="1")
+        li(data-target="#slider-intro", data-slide-to="2")
+      .carousel-inner
+        each val in sliderBanner
+          +sliderBanner(val)
+
+      a.carousel-control-prev(
+        href="#slider-intro",
+        role="button",
+        data-slide="prev"
+      )
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(
+        href="#slider-intro",
+        role="button",
+        data-slide="next"
+      )
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.sr-only Next
+
+  +headerMiddle
