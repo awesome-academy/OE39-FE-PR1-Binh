@@ -1,0 +1,137 @@
+.footer {
+  background-color: $white-color;
+  color: #818181;
+
+  .footer__title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  .footer__list {
+    li {
+      a {
+        color: inherit;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .footer__top {
+    margin-bottom: 5.5rem;
+    .footer__top-brand {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .cta {
+    margin-top: 2rem;
+
+    .form-control {
+      max-width: 24rem;
+      padding: 1.5rem 2rem;
+      border: 1px solid #e8e8e8;
+      border-radius: 0;
+      outline: 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+
+    .cta__btn {
+      font-size: 1.38rem;
+      text-transform: uppercase;
+      padding: 0 2rem;
+      background-color: #252525;
+      color: $white-color;
+      border-radius: 0;
+      border: 0;
+      outline: 0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 1.6rem 1.78rem;
+        border-color: transparent transparent transparent #252525;
+        top: 0rem;
+        right: -3.54rem;
+        z-index: 2100;
+      }
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+
+    li {
+      i {
+        color: #818181;
+
+        &:hover,
+        &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+
+    li + li {
+      margin-left: 1rem;
+    }
+  }
+
+  .footer__contact {
+    span + span {
+      margin-left: 1rem;
+    }
+    a {
+      color: inherit;
+      font-style: italic;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footer__bottom {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @include mq("xs", "max") {
+    .footer__top {
+      margin-bottom: 2.5rem;
+    }
+
+    .footer__bottom {
+      margin-top: 1.8rem;
+      .container {
+        flex-direction: column-reverse;
+      }
+
+      .copyright {
+        margin-top: 0.9rem;
+      }
+    }
+  }
+}
