@@ -1,0 +1,22 @@
+.breadcrumb {
+  background-color: $white-color;
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  .breadcrumb-item {
+    a {
+      color: #818181;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+
+    &.active {
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+}

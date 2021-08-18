@@ -1,0 +1,6 @@
+mixin breadcrumb(props)
+  nav(aria-label="breadcrumb")
+    ol.breadcrumb
+      each val, index in props
+        li.breadcrumb-item(class=index === props.length - 1 ? 'active' : '')
+          a(href=`${val.href}`) #{ val.anchor }

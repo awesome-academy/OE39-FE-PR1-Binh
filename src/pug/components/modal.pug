@@ -1,0 +1,36 @@
+mixin modal
+  #modal-cta.modal.fade(
+    tabindex="-1",
+    role="dialog",
+    aria-labelledby="exampleModalLabel",
+    aria-hidden="true"
+  )
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") ×
+        .modal-body
+          .container-fluid
+            .row
+              .col-md-3.d-none
+                img(src="../images/banner-modal.jpg", alt="Modal")
+              .col-md-9.text-center.d-flex.justify-content-center
+                .modal__wrapper
+                  h2.modal__title Gửi Email
+                  p.modal__desc Đăng ký Email ngay hôm nay để nhận được thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!
+                  form.modal__cta
+                    .input-group
+                      input.form-control(
+                        type="text",
+                        placeholder="Email của bạn ...",
+                        aria-label="Email của bạn ...",
+                        aria-describedby="basic-addon2"
+                      )
+                      .input-group-append
+                        button.btn.btn-outline-secondary.cta__btn(
+                          type="button"
+                        ) Gửi Email
+                    .form-check
+                      input#exampleCheck1.form-check-input(type="checkbox")
+                      label.form-check-label(for="exampleCheck1") Không hiển thị lại thông báo này
