@@ -1,0 +1,14 @@
+mixin headerMobile
+  .menu__mobile
+    label.menu__mobile-close(for="menu__input-check")
+      i.fas.fa-times
+  form.mobile__search(action="#", method="get")
+    input#mobile__search(
+      type="text",
+      name="mobile__search",
+      placeholder="Tìm kiếm ở đây ...",
+      required="",
+      value=""
+    )
+    button.btn.btn-primary(type="submit")
+      i.fas.fa-search

@@ -1,0 +1,16 @@
+mixin headerTop
+  .header__top
+    .container
+      .header__left
+        ul.header__top-menu
+          li
+            +menuTop(subMenu, "Link", "")
+
+      .header__right
+        form.header__search(action="#")
+          input.header__search-input(
+            type="text",
+            placeholder="Tìm kiếm ở đây ..."
+          )
+          button 
+            i.header__search-icon.fas.fa-search

@@ -1,0 +1,8 @@
+mixin sliderBanner({isActive = "", image, titleBig, titleMedium, titleSmall})
+  .carousel-item.header__slider-item(class=isActive)
+    img.header__slider-image.d-block.w-100(src=image, alt="...")
+    .carousel-caption.d-md-block.header__slider-content
+      h1.header__slider-title
+        span.header__slider-title--big= titleBig
+        span.header__slider-title--medium= titleMedium
+        span.header__slider-title--small= titleSmall
