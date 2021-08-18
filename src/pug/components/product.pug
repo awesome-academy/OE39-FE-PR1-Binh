@@ -1,0 +1,31 @@
+mixin productItem(props, horizontal = "")
+  .product(class=horizontal ? 'horizontal' : '')
+    figure.product__media
+      if props.label
+        span.product__label(class=`product__label-${props.label.class}`)
+        span.product__label-text #{ props.label.title }
+      a(href=`${props.slug}`)
+        img.product__image(src=`${props.thumbnail}`, alt="Product")
+      .product__action-horizontal
+        a.btn-product-icon.btn-wishlist
+          span Yêu thích
+        a.btn-product-icon.btn-compare
+          span So sánh
+        a.btn-product-icon.btn-quickview
+    .product__body
+      h3.product__title
+        a(href=`${props.slug}`) #{ props.title }
+      .product__price 
+        span.product__price-new #{ props.price.priceNew }
+        if props.price.priceOld
+          span.product__price-old #{ props.price.priceOld }
+      if horizontal && props.desc
+        p.product__desc #{ props.desc }
+      .product__action
+        button.btn-cart
+          span Add to cart
+        if horizontal
+          button.btn-product-icon.btn-wishlist
+            span Yêu thích
+          button.btn-product-icon.btn-compare
+            span So sánh

@@ -1,0 +1,16 @@
+mixin postItem(props)
+  article.post
+    figure.post__media
+      span.post__icon
+      a(href=`${props.slug}`)
+        img.post__image(src=`${props.thumbnail}`, alt="Post")
+    .post__body
+      h3.post__title 
+        a(href="#") #{ props.title }
+      .post__meta
+        a.post__author(href="#") Đăng bởi #{ props.author }
+        a.post__date(href="#") #{ props.public }
+        a.post__comment(href="#") #{ props.comment } bình luận
+      .post__content
+        p.post__desc #{ props.desc }
+        a.read-more(href="#") Read More
