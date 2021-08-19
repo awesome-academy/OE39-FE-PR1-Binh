@@ -1,0 +1,56 @@
+.modal__wrapper {
+  margin: auto 0;
+}
+
+.modal-header {
+  border-bottom: none;
+
+  button {
+    font-size: 2rem;
+  }
+}
+
+.modal__title,
+.modal__desc {
+  margin-bottom: 3rem;
+}
+
+.modal__desc {
+  font-size: 1.6rem;
+}
+
+.modal__cta {
+  padding: 0 5rem;
+
+  .form-control {
+    padding: 2rem;
+    font-size: 1.4rem;
+    outline: 0;
+    border-radius: 0;
+  }
+
+  .cta__btn {
+    color: $white-color;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .form-check {
+    display: block;
+    margin-top: 2rem;
+
+    .form-check-input {
+      margin-top: 0.78rem;
+      margin-left: -2rem;
+    }
+  }
+
+  @include mq("md", "max") {
+    padding: 0;
+  }
+}
