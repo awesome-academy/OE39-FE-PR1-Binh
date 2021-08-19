@@ -1,0 +1,11 @@
+mixin testimonialItem({customer, job, avatar, message})
+  .testimonial
+    .testimonial__body
+      span.testimonial__icon
+        i.fas.fa-quote-right
+      span.testimonial__message #{ message }
+      a.testimonial__readmore(href="#") Read more
+    .testimonial__info 
+      img.testimonial__image(src=`${avatar}`, alt="Testimonial")
+      h5.testimonial__customer #{ customer }
+      small.testimonial__job #{ job }
