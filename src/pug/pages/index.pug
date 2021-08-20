@@ -9,3 +9,14 @@ block main
     //- +heading("Sản phẩm mới")
     //- +title("RƯợu nho năm 1987")
     //- +breadcrumb([{href: "#", anchor: "Home"}, {href: "#", anchor: "Library"}, {href: "#", anchor: "Data"}])
+    .container
+      .row
+        each val in productHomeData
+          .col-md-3.col-xs-12
+            +productItem(val)
+
+    .container
+      .row
+        each val in postHomeData
+          .col-md-4.col-xs-12.mb-2
+            +postItem(val)

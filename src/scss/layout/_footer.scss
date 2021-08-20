@@ -1,6 +1,6 @@
 .footer {
   background-color: $white-color;
-  color: #818181;
+  color: $body-text;
 
   .footer__title {
     text-transform: uppercase;
@@ -38,7 +38,7 @@
     .form-control {
       max-width: 24rem;
       padding: 1.5rem 2rem;
-      border: 1px solid #e8e8e8;
+      border: 1px solid $border-color;
       border-radius: 0;
       outline: 0;
       font-style: italic;
@@ -49,7 +49,7 @@
       font-size: 1.38rem;
       text-transform: uppercase;
       padding: 0 2rem;
-      background-color: #252525;
+      background-color: $button-bg-color;
       color: $white-color;
       border-radius: 0;
       border: 0;
@@ -61,7 +61,7 @@
         content: "";
         border-style: solid;
         border-width: 1.6rem 1.78rem;
-        border-color: transparent transparent transparent #252525;
+        border-color: transparent transparent transparent $button-bg-color;
         top: 0rem;
         right: -3.54rem;
         z-index: 2100;
@@ -77,7 +77,7 @@
 
     li {
       i {
-        color: #818181;
+        color: $body-text;
 
         &:hover,
         &:focus {
@@ -107,7 +107,7 @@
   }
 
   .footer__bottom {
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $border-color;
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
 

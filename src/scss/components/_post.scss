@@ -1,0 +1,138 @@
+.post {
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.35s ease;
+  transition: -webkit-box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease, -webkit-box-shadow 0.35s ease;
+
+  &:hover,
+  &:focus {
+    -webkit-box-shadow: 2px 5px 8px
+        rgba($color: $box-shadow-color, $alpha: 0.05),
+      -2px 5px 8px rgba($color: $box-shadow-color, $alpha: 0.05);
+    box-shadow: 2px 5px 8px rgba($color: $box-shadow-color, $alpha: 0.05),
+      -2px 5px 8px rgba($color: $box-shadow-color, $alpha: 0.05);
+  }
+
+  &:hover,
+  &:focus {
+    .post__media {
+      &::before,
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.post__media {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 229.78px solid rgba($color: $white-color, $alpha: 0.3);
+    border-left: 376px solid transparent;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    transition: all 0.25s linear;
+  }
+
+  &::after {
+    content: "\f0c1";
+    color: $dark-text;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 50%;
+    left: 50%;
+    background-color: rgba($color: $light-text, $alpha: 0.5);
+    transform-origin: left;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+  }
+
+  &:hover::after {
+    color: $white-color;
+    background-color: $primary-color;
+  }
+
+  .post__image {
+    width: 100%;
+  }
+}
+
+.post__body {
+  margin-top: 2.2rem;
+  padding: 0 1rem;
+
+  .post__title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+
+    a {
+      color: $post-title-text;
+    }
+  }
+
+  .post__meta {
+    margin-bottom: 1rem;
+
+    a {
+      color: $post-meta-text;
+      display: inline-block;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+
+    a:not(:first-child) {
+      padding-left: 0.8rem;
+      margin-left: 0.8rem;
+    }
+
+    a:not(:first-child)::before {
+      position: absolute;
+      content: "|";
+      color: inherit;
+      top: 0;
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .post__content {
+    padding-bottom: 1.2rem;
+
+    color: $body-text;
+    .post__desc {
+      color: inherit;
+      font-size: 1.4rem;
+    }
+
+    .read-more {
+      color: inherit;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
