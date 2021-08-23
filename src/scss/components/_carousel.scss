@@ -1,0 +1,56 @@
+.carousel.default {
+  margin: 50px auto;
+  // padding: 0 20px;
+
+  .carousel-item {
+    min-height: 330px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba($color: $dark-text, $alpha: 0.2);
+  }
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba($color: $dark-text, $alpha: 0.8);
+    text-shadow: none;
+    font-weight: bold;
+  }
+  .carousel-control-prev i {
+    margin-left: -3px;
+  }
+  .carousel-control-next i {
+    margin-right: -3px;
+  }
+  .carousel-indicators {
+    bottom: -50px;
+  }
+  .carousel-indicators li,
+  .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: none;
+  }
+  .carousel-indicators li {
+    background: rgba($color: $dark-text, $alpha: 0.2);
+  }
+  .carousel-indicators li.active {
+    background: $primary-color;
+  }
+}

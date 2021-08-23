@@ -1,0 +1,7 @@
+mixin homePost
+  section.home-news
+    +heading("Tin tức & blog")
+    .row
+      each val in postHomeData
+        .col-md-6.col-xs-12
+          +postItem(val)

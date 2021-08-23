@@ -1,0 +1,55 @@
+mixin carouselProduct(type, data)
+  .carousel.default.slide(
+    id=`${type}Carousel`,
+    data-ride="carousel",
+    data-interval="0"
+  )
+    // Carousel indicators
+    ol.carousel-indicators
+      li.active(data-target=`#${type}Carousel`, data-slide-to="0")
+      li(data-target=`#${type}Carousel`, data-slide-to="1")
+      li(data-target=`#${type}Carousel`, data-slide-to="2")
+    // Wrapper for carousel items
+    .carousel-inner
+      .carousel-item.active
+        .row
+          each val in data
+            .col-lg-3.col-md-6.col-xs-12
+              +productItem(val)
+      .carousel-item
+        .row
+          each val in data
+            .col-lg-3.col-md-6.col-xs-12
+              +productItem(val)
+      .carousel-item
+        .row
+          each val in data
+            .col-lg-3.col-md-6.col-xs-12
+              +productItem(val)
+    // Carousel controls
+    a.carousel-control-prev(href=`#${type}Carousel`, data-slide="prev")
+      i.fa.fa-angle-left
+    a.carousel-control-next(href=`#${type}Carousel`, data-slide="next")
+      i.fa.fa-angle-right
+
+mixin carouselTestimonial(type, data)
+  .carousel.default.slide(
+    id=`${type}Carousel`,
+    data-ride="carousel",
+    data-interval="0"
+  )
+    // Carousel indicators
+    ol.carousel-indicators
+      li.active(data-target=`#${type}Carousel`, data-slide-to="0")
+      li(data-target=`#${type}Carousel`, data-slide-to="1")
+      li(data-target=`#${type}Carousel`, data-slide-to="2")
+    // Wrapper for carousel items
+    .carousel-inner
+      each val, index in data
+        .carousel-item(class=index === 0 ? 'active' : '')
+          +testimonialItem(val)
+    // Carousel controls
+    a.carousel-control-prev(href=`#${type}Carousel`, data-slide="prev")
+      i.fa.fa-angle-left
+    a.carousel-control-next(href=`#${type}Carousel`, data-slide="next")
+      i.fa.fa-angle-right

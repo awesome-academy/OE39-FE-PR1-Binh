@@ -4,19 +4,39 @@ block vars
   - title = 'This Home Page';
   - bodyClass = 'page-wrapper';
 
+block append mixins
+  include ../components/heading
+  include ../components/breadcrumb
+  include ../components/modal
+  include ../components/product
+  include ../components/post
+  include ../components/testimonial
+  include ../components/carousel
+  include ../components/banner
+  include ../blocks/home/introduction
+  include ../blocks/home/deal
+  include ../blocks/home/product-arrival
+  include ../blocks/home/banner
+  include ../blocks/home/product-best-seller
+  include ../blocks/home/news
+  include ../blocks/home/testimonial
+
+block append includes
+  include ../constants/posts
+  include ../constants/products
+  include ../constants/testimonial
+  include ../constants/banner
+
 block main
   main.main
-    //- +heading("Sản phẩm mới")
-    //- +title("RƯợu nho năm 1987")
-    //- +breadcrumb([{href: "#", anchor: "Home"}, {href: "#", anchor: "Library"}, {href: "#", anchor: "Data"}])
+    +introduction
+    +deal
+    +productArrival
+    +homeBanner
+    +productBestSeller
     .container
       .row
-        each val in productHomeData
-          .col-md-3.col-xs-12
-            +productItem(val)
-
-    .container
-      .row
-        each val in postHomeData
-          .col-md-4.col-xs-12.mb-2
-            +postItem(val)
+        .col-lg-8.col-md-12
+          +homePost
+        .col-lg-4.col-md-12
+          +homeTestimonial
