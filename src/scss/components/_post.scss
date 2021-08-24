@@ -24,6 +24,10 @@
       }
     }
   }
+
+  @include mq("sm", "max") {
+    margin-bottom: 1rem;
+  }
 }
 
 .post__media {
@@ -41,12 +45,15 @@
     display: block;
     visibility: hidden;
     transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
   }
 
   &::after {
     content: "\f0c1";
     color: $dark-text;
-    font-family: "Font Awesome 5 Free";
+    font-family: $font-awesome;
     font-weight: 900;
     position: absolute;
     width: 4rem;

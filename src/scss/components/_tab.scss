@@ -1,0 +1,19 @@
+.nav-pills {
+  &.show {
+    > .nav-link {
+      background-color: $primary-color;
+    }
+  }
+  .nav-item {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  .nav-link {
+    color: $body-text;
+
+    &.active {
+      background-color: $primary-color;
+    }
+  }
+}

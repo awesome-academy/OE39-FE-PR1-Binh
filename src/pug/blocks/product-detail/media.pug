@@ -1,0 +1,10 @@
+mixin productDetailMedia(props)
+  .row.no-gutters.product-detail__media
+    .col-lg-10.order-lg-2
+      .product-detail__media-active
+        img(src=`${props.image}`, alt="Product detail")
+    .col-lg-2
+      ul.product-detail__media-thumbnails
+        each val in props.thumbnails
+          li
+            img(src=`${val}`, alt="Product detail")

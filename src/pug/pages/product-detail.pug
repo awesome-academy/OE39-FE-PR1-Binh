@@ -1,0 +1,65 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This Product Detail Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Sản phẩm"
+      },
+      {
+        href: "#", 
+        anchor: "Rượu vang đỏ"
+      }
+    ]
+  -
+    const bannerData = {
+        image: "../images/banner-1.png",
+        title: "Rượu",
+        desc: "1987"
+      }
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/banner
+  include ../components/tab
+  include ../components/product
+  include ../components/carousel
+  include ../components/share
+  include ../blocks/product-detail/media
+  include ../blocks/product-detail/main
+
+block append includes
+  include ../constants/products
+  include ../constants/tab
+
+block main
+  main.product-detail
+    .container
+      +breadcrumb(breadcrumbData)
+      .product-detail__wrapper
+        .row
+          .col-lg-6
+            +productDetailMedia(productDetailImage)
+          .col-lg-6
+            +productDetailMain
+            +share
+        .row.product-detail__content
+          .col-lg-8.col-md-12
+            +tabItem(productTab)
+          .col-lg-4.col-md-12
+            +bannerItem(bannerData)
+      .product-related
+
+    .container.mt-6
+      +heading("sản phẩm liên quan")
+      .row 
+        .col-lg-12
+          +carouselProduct("productBestSeller", productHomeData)

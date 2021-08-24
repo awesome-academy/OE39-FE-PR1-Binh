@@ -1,0 +1,103 @@
+.share {
+  display: flex;
+  margin-top: 3.6rem;
+}
+
+.btn-share {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 0.2rem 1.5rem;
+  font-size: 1.6rem;
+  outline: 0 !important;
+  border-radius: 2px;
+
+  i {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+}
+
+.share-facebook,
+.share-twitter,
+.share-pinterest {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.share-facebook {
+  .btn-share {
+    color: $white-color;
+    background-color: $bg-share-facebook;
+  }
+}
+
+.share-twitter {
+  .btn-share {
+    color: $share-text;
+    background-color: $bg-share-twitter;
+  }
+
+  i {
+    color: $share-text-twitter;
+  }
+}
+
+.share-pinterest {
+  .btn-share {
+    color: $share-text;
+    background-color: $bg-share-pinterest;
+  }
+
+  i {
+    color: $share-text-pinterest;
+  }
+}
+
+.share-number {
+  padding: 0.3rem 1rem;
+  margin-left: 0.6rem;
+  border-radius: 2px;
+  border: 1px solid $share-text;
+  border-radius: 2px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $share-text;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid $white-color;
+    transform: translateY(-50%);
+  }
+}
+
+@include mq("md", "max") {
+  .share {
+    flex-wrap: wrap;
+  }
+
+  .share-facebook,
+  .share-twitter,
+  .share-pinterest {
+    margin-bottom: 1rem;
+  }
+}

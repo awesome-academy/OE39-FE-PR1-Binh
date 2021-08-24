@@ -1,0 +1,11 @@
+mixin bannerItem({image, title, desc})
+  .banner
+    figure.banner__image
+      .banner__overlay
+        span.banner__overlay-top
+        span.banner__overlay-right
+        span.banner__overlay-bottom
+        span.banner__overlay-left
+      h1.banner__overlay-title #{ title }
+      small.banner__overlay-desc #{ desc }
+      img(src=image, alt="Banner")

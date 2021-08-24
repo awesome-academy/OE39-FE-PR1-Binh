@@ -29,3 +29,18 @@ mixin productItem(props, horizontal = "")
             span Yêu thích
           button.btn-product-icon.btn-compare
             span So sánh
+
+mixin productRating(nums)
+  each val, index in Array(nums)
+    i.fas.fa-star
+    if index + 1 === nums
+      i.far.fa-star
+
+mixin productCheckboxColor(color)
+  .custom-control.custom-radio
+    input.custom-control-input(
+      id=`product-detail__color-${color}`,
+      type="radio",
+      name="customRadio"
+    )
+    label.custom-control-label(for=`product-detail__color-${color}`)

@@ -1,0 +1,22 @@
+mixin tabItem(props)
+  ul#pills-tab.nav.nav-pills.mb-2(role="tablist")
+    each val, index in props
+      li.nav-item
+        a.nav-link(
+          id=`pills-${val.name}-tab`,
+          class=index === 0 ? 'active' : '',
+          data-toggle="pill",
+          href=`#pills-${val.name}`,
+          role="tab",
+          aria-controls=`#pills-${val.name}`,
+          aria-selected="true"
+        ) #{ val.title }
+
+  #tab-content.tab-content
+    each val, index in props
+      .tab-pane.fade(
+        id=`pills-${val.name}`,
+        class=index === 0 ? 'show active' : '',
+        role="tabpanel",
+        aria-labelledby=`pills-${val.name}-tab`
+      ) #{ val.desc }

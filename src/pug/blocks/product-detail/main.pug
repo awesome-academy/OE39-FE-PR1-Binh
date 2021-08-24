@@ -1,0 +1,43 @@
+mixin productDetailMain
+  +title("Rượu nho năm 1987")
+  h4.product-detail__price 330.000đ
+  .product-detail__meta
+    .product-detail__ratings
+      +productRating(4)
+    span.product-detail__reviews 6 Review(S)
+    a(href="#") Add your review
+  .product-detail__colors
+    .product-detai__title Màu sắc
+    .product-detail__colors-wrapper
+      +productCheckboxColor("yellow")
+      +productCheckboxColor("black")
+      +productCheckboxColor("red")
+  .product-detail__sizes
+    .product-detai__title Kích cỡ
+    .form-group
+      label(for="product-detail__sizes")
+      select#product-detail__sizes.form-control
+        option(value="big") Loại to
+        option(value="medium") Loại vừa
+        option(value="small") Loại nhỏ
+  .product-detail__count
+    .product-detai__title Số lượng
+    .product-detail__count-wrapper
+      .product-detail__count-left
+        button.btn-minus
+          i.fas.fa-minus
+        input.input-product-count(type="text", placeholder="3")
+        button.btn-plus
+          i.fas.fa-plus
+      button.btn-cart
+        span Add to cart
+  .product-detail__action
+    a.btn-wishlist(href="#")
+      span Yêu Thích
+    a.btn-compare(href="#")
+      span So sánh
+    a.btn-email(href="#")
+      span Email
+  .product-detail__desc
+    .product-detai__title Mô tả
+    p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
