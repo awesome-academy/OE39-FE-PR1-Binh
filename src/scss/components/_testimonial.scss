@@ -1,5 +1,5 @@
 .testimonial {
-  .testimonial__body {
+  &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
     text-align: center;
   }
 
-  .testimonial__icon {
+  &__icon {
     width: 6rem;
     height: 6rem;
     color: $white-color;
@@ -23,7 +23,11 @@
     }
   }
 
-  .testimonial__readmore {
+  &__message {
+    padding: 0 2rem;
+  }
+
+  &__readmore {
     color: $testimonial-readmore-text;
 
     &:hover,
@@ -32,16 +36,16 @@
     }
   }
 
-  .testimonial__info {
+  &__info {
     text-align: center;
     margin-top: 3rem;
   }
 
-  .testimonial__image {
+  &__image {
     margin: 0 auto;
   }
 
-  .testimonial__customer {
+  &__customer {
     margin-top: 2rem;
     margin-bottom: 0;
     text-transform: uppercase;

@@ -1,0 +1,148 @@
+.main {
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+
+  @include mq("sm", "max") {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+  }
+}
+
+.introduction {
+  &_body {
+    text-align: center;
+  }
+
+  &_desc {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.deal {
+  margin-top: 10.5rem;
+  margin-bottom: 45rem;
+  &__wrapper {
+    position: relative;
+  }
+
+  &__banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    padding: 0 10rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    .product {
+      padding: 9.6rem;
+    }
+  }
+
+  .product__media {
+    min-width: 49rem !important;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  @include mq("xl", "max") {
+    .product__media {
+      min-width: 30rem !important;
+    }
+  }
+
+  @include mq("lg", "max") {
+    .deal__body {
+      padding: 0 5rem;
+
+      .product {
+        padding: 3.6rem;
+      }
+    }
+  }
+
+  @include mq("sm", "max") {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+
+    .deal__banner {
+      margin-bottom: 2.5rem;
+    }
+
+    .product__media {
+      min-width: unset !important;
+    }
+
+    .deal__body {
+      padding: 0rem;
+      position: relative;
+
+      .product {
+        padding: 3.6rem;
+      }
+    }
+  }
+}
+
+.arrival {
+  .carousel-indicators {
+    display: none;
+  }
+
+  @include mq("lg", "max") {
+    .carousel-indicators {
+      display: flex;
+    }
+  }
+}
+
+.banner__wrapper {
+  .container-fluid {
+    padding: 0;
+  }
+
+  @include mq("sm", "max") {
+    margin-top: 2rem;
+  }
+}
+
+.best-seller {
+  margin-top: 9.5rem;
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  @include mq("lg", "max") {
+    .carousel-indicators {
+      display: flex;
+    }
+  }
+}
+
+.home-news {
+  @include mq("sm", "max") {
+    margin-top: 2rem;
+  }
+}
+
+.home-testimonial {
+  .carousel {
+    margin: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  @include mq("lg", "max") {
+    margin-top: 4.5rem;
+  }
+}

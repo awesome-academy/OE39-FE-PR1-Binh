@@ -14,17 +14,17 @@ mixin carouselProduct(type, data)
       .carousel-item.active
         .row
           each val in data
-            .col-md-3.col-xs-12
+            .col-lg-3.col-md-6.col-xs-12
               +productItem(val)
       .carousel-item
         .row
           each val in data
-            .col-md-3.col-xs-12
+            .col-lg-3.col-md-6.col-xs-12
               +productItem(val)
       .carousel-item
         .row
           each val in data
-            .col-md-3.col-xs-12
+            .col-lg-3.col-md-6.col-xs-12
               +productItem(val)
     // Carousel controls
     a.carousel-control-prev(href=`#${type}Carousel`, data-slide="prev")

@@ -24,6 +24,10 @@
       }
     }
   }
+
+  @include mq("sm", "max") {
+    margin-bottom: 1rem;
+  }
 }
 
 .post__media {
@@ -41,6 +45,9 @@
     display: block;
     visibility: hidden;
     transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
   }
 
   &::after {
