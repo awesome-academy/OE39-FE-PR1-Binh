@@ -32,3 +32,30 @@
     box-shadow: none !important;
   }
 }
+
+.btn-plus,
+.btn-minus {
+  padding: 0.6rem 1.5rem;
+  background-color: $border-color;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.btn-cart {
+  text-transform: uppercase;
+  color: $white-color;
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+  background-color: $dark-text;
+  border: 0 !important;
+  outline: 0 !important;
+  transition: background-color 0.25s linear;
+  -webkit-transition: background-color 0.25s linear;
+  -o-transition: background-color 0.25s linear;
+  -moz-transition: background-color 0.25s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+}

@@ -60,7 +60,7 @@ body {
     opacity: 0.6;
 
     .header__slider-title--big {
-      font-family: "UTM Aquarelle";
+      font-family: $third-font-family;
       font-size: 385.22px;
       line-height: 1;
     }
@@ -69,12 +69,12 @@ body {
       position: absolute;
       top: 6rem;
       right: 30rem;
-      font-family: "UTM Aquarelle";
+      font-family: $third-font-family;
       font-size: 84.13px;
     }
 
     .header__slider-title--small {
-      font-family: "Lobster";
+      font-family: $tenth-font-family;
       font-size: 43.59px;
     }
   }
@@ -182,7 +182,7 @@ body {
 
           &::before {
             position: absolute;
-            font-family: "Font Awesome 5 Free";
+            font-family: $font-awesome;
             content: "\f107";
             font-weight: 900;
             position: absolute;
@@ -327,7 +327,7 @@ body {
     }
 
     .logo__title {
-      font-family: "UTM Alpine KT";
+      font-family: $seventh-font-family;
       color: inherit;
       font-size: 2.9rem;
       padding-top: 4rem;
@@ -335,7 +335,7 @@ body {
     }
 
     .logo__desc {
-      font-family: "Roboto Slab";
+      font-family: $eighth-font-family;
       font-size: 1.6rem;
       font-weight: 300;
       color: inherit;
@@ -355,7 +355,7 @@ body {
     }
 
     .sf-with-ul::after {
-      font-family: "Font Awesome 5 Free";
+      font-family: $font-awesome;
       content: "\f107";
       font-weight: 900;
       position: absolute;

@@ -15,12 +15,12 @@
   }
 
   &.title {
-    &__title {
+    .heading__title {
       font-size: 2.5rem;
       text-align: left;
     }
 
-    &__desc {
+    .heading__desc {
       img {
         margin: 0;
       }

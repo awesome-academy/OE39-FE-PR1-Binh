@@ -1,0 +1,62 @@
+mixin tabItem(props)
+  ul#pills-tab.nav.nav-pills.mb-2(role="tablist")
+    each val, index in props
+      li.nav-item
+        a.nav-link(
+          id=`pills-${val.name}-tab`,
+          class=index === 0 ? 'active' : '',
+          data-toggle="pill",
+          href=`#pills-${val.name}`,
+          role="tab",
+          aria-controls=`#pills-${val.name}`,
+          aria-selected="true"
+        ) #{ val.title }
+
+  #tab-content.tab-content
+    each val, index in props
+      .tab-pane.fade(
+        id=`pills-${val.name}`,
+        class=index === 0 ? 'show active' : '',
+        role="tabpanel",
+        aria-labelledby=`pills-${val.name}-tab`
+      ) #{ val.desc }
+
+mixin tabProductList
+  .product-list__tabs
+    ul#pills-tab.nav.nav-pills(role="tablist")
+      li.nav-item
+        a#pills-products-gird-tab.nav-link.active(
+          data-toggle="pill",
+          href="#pills-products-gird",
+          role="tab",
+          aria-controls="pills-products-gird",
+          aria-selected="true"
+        )
+          i.fas.fa-th
+      li.nav-item
+        a#pills-products-list-tab.nav-link(
+          data-toggle="pill",
+          href="#pills-products-list",
+          role="tab",
+          aria-controls="pills-products-list",
+          aria-selected="false"
+        )
+          i.fas.fa-list
+    +paginationDefault(pagination)
+  #pills-tabContent.tab-content
+    #pills-products-gird.tab-pane.fade.show.active(
+      role="tabpanel",
+      aria-labelledby="pills-products-gird-tab"
+    )
+      .row
+        each val in productHomeData
+          .col-lg-4.col-md-6.col-xs-12
+            +productItem(val)
+    #pills-products-list.tab-pane.fade(
+      role="tabpanel",
+      aria-labelledby="pills-products-list-tab"
+    )
+      .row
+        each val in productHomeData
+          .col-lg-12.col-md-12.col-xs-12
+            +productItem(val, "horizontal")

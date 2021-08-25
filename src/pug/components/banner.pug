@@ -9,3 +9,16 @@ mixin bannerItem({image, title, desc})
       h1.banner__overlay-title #{ title }
       small.banner__overlay-desc #{ desc }
       img(src=image, alt="Banner")
+
+mixin bannerVetical({imageUrl, bigText, mediumText, smallText})
+  .banner-vetical
+    img(src=`${imageUrl}`, alt="Banner")
+    .banner-text
+      span.banner-text-medium #{ mediumText }
+      .banner-text-wrapper
+        span.banner-text-big #{ bigText }
+        span.banner-text-small #{ smallText }
+
+mixin bannerHorizontal(imageUrl)
+  .banner-horizontal
+    img(src=`${imageUrl}`, alt="Banner")

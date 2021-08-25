@@ -222,7 +222,7 @@
   cursor: pointer;
 
   &::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: $font-awesome;
     font-weight: 900;
   }
 
@@ -281,7 +281,7 @@
 
   .product__price {
     &-new {
-      font-family: "UTM Caviar";
+      font-family: $second-font-family;
       font-size: 2.1rem;
       color: $primary-color;
       display: inline-block;
@@ -313,21 +313,84 @@
   .product__action {
     margin-top: 2.4rem;
     padding-bottom: 2rem;
+  }
 
-    .btn-cart {
-      text-transform: uppercase;
-      color: $white-color;
-      font-size: 1.4rem;
-      padding: 1rem 1.5rem;
-      background-color: $dark-text;
-      outline: 0;
-      transition: background-color 0.25s linear;
-      -webkit-transition: background-color 0.25s linear;
+  .btn-cart {
+    text-transform: uppercase;
+    color: $white-color;
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    background-color: $dark-text;
+    outline: 0;
+    transition: background-color 0.25s linear;
+    -webkit-transition: background-color 0.25s linear;
+  }
 
-      &:hover,
-      &:focus {
-        background-color: $primary-color;
-      }
+    .product__deal-number {
+      font-size: 3.4rem;
+      font-family: $second-font-family;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+  .product__deal-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  @include mq("lg", "max") {
+    .product__deal-number {
+      font-size: 3rem;
+    }
+  }
+
+  @include mq("sm", "max") {
+    .product__deal {
+      margin-top: 3.5rem;
+    }
+  }
+
+  .product__deal {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: $primary-color;
+
+    .product__deal-day,
+    .product__deal-hour,
+    .product__deal-minute,
+    .product__deal-second {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem 0;
+      border: 1px solid $primary-color;
+    }
+  }
+
+    .product__deal-number {
+      font-size: 3.4rem;
+      font-family: $second-font-family;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+  .product__deal-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  @include mq("lg", "max") {
+    .product__deal-number {
+      font-size: 3rem;
+    }
+  }
+
+  @include mq("sm", "max") {
+    .product__deal {
+      margin-top: 3.5rem;
     }
   }
 
@@ -353,7 +416,7 @@
 
   .product__deal-number {
     font-size: 3.4rem;
-    font-family: "UTM Caviar";
+    font-family: $second-font-family;
     line-height: 1;
     margin-bottom: 1rem;
   }

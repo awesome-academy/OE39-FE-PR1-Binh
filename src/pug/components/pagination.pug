@@ -1,0 +1,14 @@
+mixin paginationDefault(pages)
+  .pagination
+    ul
+      li.pagination-pre
+        a(href="#")
+          i.fas.fa-caret-left
+      li
+        ul.list-pages
+          each val in pages
+            li
+              a(href=`${val.href}`) #{ val.page }
+      li.pagination-next
+        a(href="#")
+          i.fas.fa-caret-right
