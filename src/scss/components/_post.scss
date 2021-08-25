@@ -53,7 +53,7 @@
   &::after {
     content: "\f0c1";
     color: $dark-text;
-    font-family: "Font Awesome 5 Free";
+    font-family: $font-awesome;
     font-weight: 900;
     position: absolute;
     width: 4rem;

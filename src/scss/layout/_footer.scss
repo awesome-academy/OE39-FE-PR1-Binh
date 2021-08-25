@@ -119,6 +119,11 @@
   }
 
   @include mq("xs", "max") {
+    .cta {
+      .cta__btn::before {
+        display: none;
+      }
+    }
     .footer__top {
       margin-bottom: 2.5rem;
     }
