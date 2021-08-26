@@ -1,0 +1,78 @@
+.cart-page {
+  margin-top: 1.5rem;
+  margin-bottom: 8rem;
+
+  .title {
+    margin-top: 2.6rem;
+    .heading__title {
+      font-size: 2.4rem;
+      color: $title-text;
+    }
+  }
+
+  table {
+    background-color: $bg-table-cart;
+  }
+  .cart__price,
+  .cart__sum {
+    color: $primary-color !important;
+  }
+
+  a {
+    color: $table-text;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  input {
+    text-align: center;
+    color: $body-text;
+    border: 1px solid $border-color;
+    outline: 0;
+    max-width: 6rem;
+    overflow: hidden;
+  }
+
+  button {
+    transition: all 0.25s linear;
+    outline: 0;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+}
+
+.cart-action {
+  float: right;
+  margin-top: 2.8rem;
+
+  .btn-cart:not(:first-child) {
+    margin-left: 1.2rem;
+  }
+
+  .btn-cart:hover,
+  .btn-cart:focus {
+    color: $white-color;
+  }
+}
+
+@include mq("md", "max") {
+  .cart-page {
+    margin-bottom: 4rem;
+
+    .title {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      .heading__title {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

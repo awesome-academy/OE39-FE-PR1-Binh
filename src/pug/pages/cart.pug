@@ -1,0 +1,35 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is Cart Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Giỏ hàng"
+      }
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/table
+
+block append includes
+  include ../constants/table
+
+block main
+  main.cart-page
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Giỏ hàng")
+      +tableCart(tableCart)
+      .cart-action
+        button.btn-cart Tiếp tục mua hàng
+        button.btn-cart Xóa
+        button.btn-cart Cập nhật

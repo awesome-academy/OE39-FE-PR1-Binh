@@ -1,0 +1,28 @@
+mixin tableCart(props)
+  .table-responsive
+    table.table.table-bordered
+      thead.cart__head
+        +tableCartHead(props.head)
+      tbody.cart__body
+        +tableCartBody(props.body)
+
+mixin tableCartHead(props)
+  tr.cart__col
+    each val in props
+      th(scope="col") #{ val }
+
+mixin tableCartBody(props)
+  each val in props
+    tr.cart__row
+      td.cart__image
+        a(href="#")
+          img(src=`${val.image}`, alt="Cart")
+      td.cart__product
+        a(href="#") #{ val.product }
+      td.cart__price #{ val.price }
+      td.cart__input
+        input(type="number", placeholder="1", value=`${val.count}`)
+      td.cart__sum #{ val.sum }
+      td.cart__delete
+        button
+          i.far.fa-trash-alt
