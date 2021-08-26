@@ -1,0 +1,16 @@
+mixin categoriesDefault(categories)
+  ul
+    each val in categories
+      +categoryItem(val)
+      if val.sub
+        ul
+          each subMenu in val.sub
+            +categoryItem(subMenu)
+            if subMenu.sub
+              ul
+                each subMenuMenu in subMenu.sub
+                  +categoryItem(subMenuMenu)
+
+mixin categoryItem(prop)
+  li
+    a(href=`${prop.href}`) #{ prop.name }

@@ -324,6 +324,7 @@
     outline: 0;
     transition: background-color 0.25s linear;
     -webkit-transition: background-color 0.25s linear;
+  }
 
     .product__deal-number {
       font-size: 3.4rem;
@@ -332,42 +333,42 @@
       margin-bottom: 1rem;
     }
 
-    .product__deal-text {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-    }
+  .product__deal-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
 
-    @include mq("lg", "max") {
-      .product__deal-number {
-        font-size: 3rem;
-      }
+  @include mq("lg", "max") {
+    .product__deal-number {
+      font-size: 3rem;
     }
+  }
 
-    @include mq("sm", "max") {
-      .product__deal {
-        margin-top: 3.5rem;
-      }
-    }
-
+  @include mq("sm", "max") {
     .product__deal {
-      margin-top: 5rem;
-      display: flex;
-      flex-wrap: wrap;
-      color: $primary-color;
-
-      .product__deal-day,
-      .product__deal-hour,
-      .product__deal-minute,
-      .product__deal-second {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1.8rem 0;
-        border: 1px solid $primary-color;
-      }
+      margin-top: 3.5rem;
     }
+  }
+
+  .product__deal {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: $primary-color;
+
+    .product__deal-day,
+    .product__deal-hour,
+    .product__deal-minute,
+    .product__deal-second {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem 0;
+      border: 1px solid $primary-color;
+    }
+  }
 
     .product__deal-number {
       font-size: 3.4rem;
@@ -376,21 +377,20 @@
       margin-bottom: 1rem;
     }
 
-    .product__deal-text {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-    }
+  .product__deal-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
 
-    @include mq("lg", "max") {
-      .product__deal-number {
-        font-size: 3rem;
-      }
+  @include mq("lg", "max") {
+    .product__deal-number {
+      font-size: 3rem;
     }
+  }
 
-    @include mq("sm", "max") {
-      .product__deal {
-        margin-top: 3.5rem;
-      }
+  @include mq("sm", "max") {
+    .product__deal {
+      margin-top: 3.5rem;
     }
   }
 

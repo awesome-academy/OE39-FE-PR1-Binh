@@ -1,0 +1,93 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This Product List Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Sản phẩm"
+      },
+      {
+        href: "#", 
+        anchor: "Rượu vang đỏ"
+      }
+    ]
+  -
+    const bannerData = {
+        image: "../images/banner-1.png",
+        title: "Rượu",
+        desc: "1987"
+      }
+  -
+    const bannerVeticalProductList = {
+        imageUrl: "../images/product-list-banner-2.png",
+        bigText: "Đỏ",
+        mediumText: "Rượu vang",
+        smallText: "1980"
+      }
+  -
+    const bannerHorizontalProductList = "../images/product-list-banner-1.png"
+  -
+    const pagination = [
+      {
+        href: "#",
+        page: 1
+      },
+      {
+        href: "#",
+        page: 2
+      },
+      {
+        href: "#",
+        page: 3
+      },
+      {
+        href: "#",
+        page: 4
+      },
+      {
+        href: "#",
+        page: 5
+      }
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/product
+  include ../components/banner
+  include ../components/pagination
+  include ../components/tab
+  include ../components/category
+  include ../blocks/product-list/tag
+
+block append includes
+  include ../constants/products
+  include ../constants/tag
+  include ../constants/category
+
+block main
+  main.product-list
+    .container
+      +breadcrumb(breadcrumbData)
+      +bannerHorizontal(bannerHorizontalProductList)
+      .row
+        .col-lg-9.order-lg-2
+          .product-list__content
+            +tabProductList
+        .col-lg-3
+          .product-list__sidebar
+            .product-list__categories
+              +title("Danh mục sản phẩm")
+              +categoriesDefault(categories)
+            .product-list__compare
+              +title("So sánh sản phẩm")
+              p Bạn chưa có bất kỳ sản phẩm nào để so sánh
+            +tagProduct(tagProduct)
+            +bannerVetical(bannerVeticalProductList)

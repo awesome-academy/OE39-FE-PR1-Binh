@@ -1,0 +1,10 @@
+mixin tagProduct(props)
+  .product-list__tags
+    +title("Tag sản phẩm")
+    ul
+      each val in props
+        +tagItem(val)
+
+mixin tagItem(prop)
+  li
+    a(href=`${prop.href}`) #{ prop.anchor }

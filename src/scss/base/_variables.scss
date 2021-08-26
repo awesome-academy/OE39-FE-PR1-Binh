@@ -38,6 +38,8 @@ $bg-checkbox-color-red: #9c0001 !default;
 $bg-share-facebook: #4965b5 !default;
 $bg-share-twitter: #e4e4e4 !default;
 $bg-share-pinterest: $bg-share-twitter !default;
+$bg-pagination: #f26522 !default;
+$bg-table-cart: #fafafa !default;
 
 $body-text: #818181 !default;
 $light-text: #b8b8b8 !default;
@@ -51,6 +53,8 @@ $product-detail-desc-text: #8e8e8e !default;
 $share-text: $bg-menu-mobile !default;
 $share-text-twitter: #00a8e8 !default;
 $share-text-pinterest: #be0c21 !default;
+$table-text: $testimonial-customer-text !default;
+$title-text: $testimonial-customer-text !default;
 
 $font-family: "Quicksand", sans-serif !default;
 $second-font-family: "UTM Caviar", sans-serif !default;
@@ -61,6 +65,7 @@ $seventh-font-family: "UTM Alpine KT", sans-serif !default;
 $eighth-font-family: "Roboto Slab", sans-serif !default;
 $nineth-font-family: "Open Sans", sans-serif !default;
 $tenth-font-family: "Lobster", sans-serif !default;
+$eleventh-font-family: "Times New Roman", sans-serif !default;
 $font-awesome: "Font Awesome 5 Free", sans-serif !default;
 
 $breakpoints: (

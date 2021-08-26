@@ -1,0 +1,33 @@
+.table {
+  text-align: center;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border-color: $border-color;
+  min-width: 12rem;
+}
+
+.table-bordered thead td,
+.table-bordered thead th {
+  border-bottom: 1px;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: $table-text;
+  font-weight: 500;
+  // padding: 1.8rem 0.75rem;
+}
+
+.table thead th {
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+th img,
+td img {
+  margin: 0 auto;
+}
