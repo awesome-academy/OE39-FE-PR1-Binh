@@ -1,0 +1,7 @@
+mixin invoiceAction
+  .invoice__action
+    h4.invoice__title Danh sách đơn hàng
+    ul.invoice__links
+      each val in invoiceAction
+        li
+          a(href=`${val.href}`) #{ val.anchor }

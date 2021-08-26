@@ -1,0 +1,38 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This Product Invoice Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Hóa đơn"
+      }
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/table
+  include ../blocks/invoice/invoice-action
+  include ../blocks/invoice/invoice-customer
+
+block append includes
+  include ../constants/invoice
+
+block main
+  main.invoice-page
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Đơn hàng")
+      .row
+        .col-lg-9
+          +invoiceAction
+          +tableInvoice(tableInvoice)
+        .col-lg-3
+          +invoiceCustomer
