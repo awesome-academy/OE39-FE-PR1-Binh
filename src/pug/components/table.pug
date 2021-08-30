@@ -26,3 +26,34 @@ mixin tableCartBody(props)
       td.cart__delete
         button
           i.far.fa-trash-alt
+
+mixin tableInvoice(props)
+  .table-responsive
+    table.table.table-bordered
+      thead.invoice__head
+        +tableInvoiceHead(props.head)
+      tbody.invoice__body
+        +tableInvoiceBody(props.body)
+
+mixin tableInvoiceHead(props)
+  tr.invoice__row
+    each val in props
+      th(scope="col") #{ val }
+
+mixin tableInvoiceBody(props)
+  each val in props
+    tr.invoice__row
+      td.invoice__stt #{ val.stt }
+      td.invoice__date
+        .invoice__username
+          span #{ val.usename }
+          span #{ val.dateDelivery }
+        .invoice__meta
+          span #{ val.dateBuyHour }
+          span #{ val.dateBuy }
+      td.invoice__stock #{ val.stock }
+      td.invoice__item #{ val.numItem }
+      td.invoice__price #{ val.totalPrice }
+      td.invoice__status #{ val.status }
+      td.invoice__detail
+        a(href="#") #{ val.detail }

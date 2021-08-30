@@ -26,6 +26,7 @@ $product-label-out-color: #ccc !default;
 
 $border-color: #e8e8e8 !default;
 $border-color-main: #e6e6e6 !default;
+$border-invoice-color: #e6e6e6 !default;
 
 $border-radius: 0 !default;
 
@@ -40,6 +41,9 @@ $bg-share-twitter: #e4e4e4 !default;
 $bg-share-pinterest: $bg-share-twitter !default;
 $bg-pagination: #f26522 !default;
 $bg-table-cart: #fafafa !default;
+$bg-pagination: #f26522 !default;
+$bg-table-cart: #fafafa !default;
+$bg-invoice: $bg-table-cart !default;
 
 $body-text: #818181 !default;
 $light-text: #b8b8b8 !default;
