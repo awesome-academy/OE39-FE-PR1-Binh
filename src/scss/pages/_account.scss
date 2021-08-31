@@ -1,0 +1,79 @@
+.account-page {
+  margin-top: 1.5rem;
+  margin-bottom: 8rem;
+
+  .title {
+    margin-top: 2.6rem;
+    margin-bottom: 2rem;
+    .heading__title {
+      font-size: 2.4rem;
+      color: $title-text;
+    }
+  }
+
+  .btn-link {
+    font-size: 1.6rem;
+  }
+}
+
+.account__title {
+  font-size: 1.8rem;
+  color: $heading-text-account;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+
+  a {
+    color: $heading-text-account;
+    text-transform: none;
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.account__address-lists {
+  margin-top: 2.5rem;
+  li {
+    padding-top: 3.5rem;
+    border-top: 1px solid $border-color-main;
+  }
+
+  .form-control:disabled,
+  .form-control[readonly] {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@include mq("lg", "max") {
+  .account-page {
+    margin-bottom: 4rem;
+
+    .title {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      .heading__title {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .account__title {
+    margin-bottom: 2rem;
+  }
+
+  .account__title {
+    a {
+      margin-top: 1.5rem;
+      display: inline-block;
+    }
+  }
+
+  .account__address-item {
+    padding-top: 2.5rem;
+  }
+}

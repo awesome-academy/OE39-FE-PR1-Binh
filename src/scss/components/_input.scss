@@ -1,0 +1,38 @@
+.form-group {
+  max-width: unset !important;
+  align-items: center;
+  color: $input-text;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block !important;
+  }
+
+  .form-control {
+    color: $input-text;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-color: $border-input-color;
+  }
+
+  .form-check-input {
+    margin-top: 0.8rem;
+    margin-left: -1.25rem;
+  }
+
+  .form-check-label {
+    margin-left: 1.5rem;
+  }
+
+  .custom-select {
+    font-size: 1.6rem;
+    color: $input-text;
+    border-color: $border-input-color;
+    border-radius: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

@@ -1,0 +1,41 @@
+mixin inputHorizontal(name ="", type ="text", placeholder="", value="", disabled = false)
+  .form-group.row
+    label.col-sm-2.col-form-label(for=`${name}`) #{ placeholder }
+    .col-sm-10
+      input.form-control(
+        disabled=disabled,
+        id=`${name}`,
+        type=`${type}`,
+        placeholder=`${placeholder}`,
+        value=`${value}`
+      )
+
+mixin checkboxHorizontal(name ="", type ="checkbox", placeholder="", value="")
+  .form-group.row
+    .col-sm-2
+    .col-sm-10
+      .form-check
+        input.form-check-input(id=`${name}`, type=`${type}`, checked)
+        label.form-check-label(for=`${name}`)
+          | #{ placeholder }
+
+mixin selectHorizontal(name ="", placeholder="", value="")
+  .form-group.row
+    label.col-sm-2.col-form-label(for=`${name}`) #{ placeholder }
+    .col-sm-10
+      select.custom-select(id=`${name}`)
+        each val in value
+          option(value=`${val.value}`) #{ val.title }
+
+mixin buttonHorizontalForm
+  .form-group.row
+    .col-sm-2
+    .col-sm-10
+      button.btn.btn-secondary(type="submit") Chỉnh sửa địa chỉ
+      button.btn.btn-primary(type="submit") Xóa
+
+mixin buttonLinkForm
+  .form-group.row
+    .col-sm-2
+    .col-sm-10
+      button.btn.btn-link.float-right(type="submit") Chỉnh sửa địa chỉ

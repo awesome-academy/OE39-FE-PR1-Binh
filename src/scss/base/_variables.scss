@@ -10,6 +10,7 @@ $primary-color-dark: #006699 !default;
 
 $secondary-color: #a6c76c !default;
 $secondary-color-dark: #2f3946 !default;
+$third-color: #24c5d9 !default;
 $link-color: $primary-color !default;
 
 $white-color: #fff !default;
@@ -26,11 +27,13 @@ $product-label-out-color: #ccc !default;
 
 $border-color: #e8e8e8 !default;
 $border-color-main: #e6e6e6 !default;
-$border-invoice-color: #e6e6e6 !default;
+$border-invoice-color: $border-color-main !default;
+$border-input-color: #e7e7e7 !default;
 
 $border-radius: 0 !default;
 
 $button-bg-color: #252525 !default;
+$bg-button-secondary: $third-color !default;
 
 $bg-overlay: #252525 !default;
 $bg-menu-mobile: #333 !default;
@@ -59,6 +62,8 @@ $share-text-twitter: #00a8e8 !default;
 $share-text-pinterest: #be0c21 !default;
 $table-text: $testimonial-customer-text !default;
 $title-text: $testimonial-customer-text !default;
+$input-text: #202020 !default;
+$heading-text-account: #131313 !default;
 
 $font-family: "Quicksand", sans-serif !default;
 $second-font-family: "UTM Caviar", sans-serif !default;

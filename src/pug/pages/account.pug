@@ -1,0 +1,45 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This Product Account Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Tài khoản"
+      }
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/form
+  include ../blocks/account/account-address
+  include ../blocks/account/account-address-item
+
+block append includes
+  include ../constants/table
+
+block main
+  main.account-page
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Địa chỉ")
+      .row
+        .col-lg-6
+          h4.account__title Địa chỉ của bạn
+          +accountAddress
+        .col-lg-6
+          h4.account__title
+            a(href="#") Thêm địa chỉ
+          +accountAddress
+      .row
+        .col-lg-6
+          ul.account__address-lists
+            +accountAddressItem
+            +accountAddressItem

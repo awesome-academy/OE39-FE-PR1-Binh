@@ -33,6 +33,33 @@
   }
 }
 
+.btn-secondary {
+  color: $white-color;
+  background-color: $bg-button-secondary;
+  border-color: $bg-button-secondary;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-link {
+  color: $third-color;
+  text-transform: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
 .btn-plus,
 .btn-minus {
   padding: 0.6rem 1.5rem;
