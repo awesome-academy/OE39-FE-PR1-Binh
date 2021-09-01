@@ -33,6 +33,26 @@
   }
 }
 
+.btn-outline-primary {
+  color: $dark-text;
+  border-color: $border-color-main;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-comment-pagination;
+    border-color: $border-color-main;
+  }
+
+  &.active {
+    background-color: $bg-comment-pagination !important;
+    border-color: $border-color-main !important;
+  }
+}
+
 .btn-secondary {
   color: $white-color;
   background-color: $bg-button-secondary;
@@ -58,6 +78,11 @@
   &:active {
     text-decoration: underline;
   }
+}
+
+.btn-video {
+  border: 0 !important;
+  outline: 0 !important;
 }
 
 .btn-plus,

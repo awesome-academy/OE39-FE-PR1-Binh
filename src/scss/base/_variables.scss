@@ -44,9 +44,12 @@ $bg-share-twitter: #e4e4e4 !default;
 $bg-share-pinterest: $bg-share-twitter !default;
 $bg-pagination: #f26522 !default;
 $bg-table-cart: #fafafa !default;
-$bg-pagination: #f26522 !default;
-$bg-table-cart: #fafafa !default;
 $bg-invoice: $bg-table-cart !default;
+$bg-tag-post: $border-color-main !default;
+$bg-tag-post-hover: $bg-pagination !default;
+$bg-comment-info: #eeeeee !default;
+$bg-comment-separation: #cbcbcb !default;
+$bg-comment-pagination: $header-menu-mega-color !default;
 
 $body-text: #818181 !default;
 $light-text: #b8b8b8 !default;
@@ -64,6 +67,9 @@ $table-text: $testimonial-customer-text !default;
 $title-text: $testimonial-customer-text !default;
 $input-text: #202020 !default;
 $heading-text-account: #131313 !default;
+$heading-text-blog-detail: $heading-text-account !default;
+$tag-text-blog-detail: #7d7d7d !default;
+$comment-text-info: #505050 !default;
 
 $font-family: "Quicksand", sans-serif !default;
 $second-font-family: "UTM Caviar", sans-serif !default;
