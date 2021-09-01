@@ -14,3 +14,18 @@ mixin postItem(props)
       .post__content
         p.post__desc #{ props.desc }
         a.read-more(href="#") Read More
+
+mixin postDetail(props)
+  article.post__detail
+    figure.post__media
+      a(href=`${props.slug}`)
+        img.post__image(src=`${props.thumbnail}`, alt="Post")
+    .post__body
+      h1.post__title 
+        a(href=`${props.slug}`) #{ props.title }
+      .post__meta
+        a.post__author(href="#") Đăng bởi #{ props.author }
+        a.post__date(href="#") #{ props.public }
+        a.post__comment(href="#") #{ props.comment } bình luận
+      .post__content
+        p.post__desc #{ props.desc }

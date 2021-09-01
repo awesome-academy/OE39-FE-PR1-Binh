@@ -1,0 +1,32 @@
+mixin postDetailComments
+  .blog-detail__comment
+    h3.blog-detail__title Đóng góp ý kiến
+    +inputHorizontal("name", "text", "Tên", "", false, true)
+    +inputHorizontal("email", "text", "Email", "", false, true)
+    +textareaHorizontal("comment", "Ý kiến", "", "4", "30", true)
+    +buttonItemForm
+  .blog-detail__comments
+    h3.blog-detail__title Bình luận
+    ul.comments
+      each val in commentPostDetail
+        li.comment-item
+          .comment-infos
+            span.comment-author Bình luận bởi #{ val.author }
+            span.comment-date Cách đây #{ val.time }
+            a.comment-action.float-right(href="#") Trả lời
+          p.comment-content #{ val.content }
+    ul.comments-pagination
+      li.comments-pre
+        button.btn.btn-primary
+          i.fas.fa-chevron-left
+      li.comments-pagination-list
+        ul
+          li
+            a.btn.btn-outline-primary.active(href="#") 1
+          li
+            a.btn.btn-outline-primary(href="#") 2
+          li
+            a.btn.btn-outline-primary(href="#") 3
+      li.comments-next
+        button.btn.btn-primary
+          i.fas.fa-chevron-right

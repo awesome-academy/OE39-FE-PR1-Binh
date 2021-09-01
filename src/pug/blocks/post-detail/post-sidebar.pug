@@ -1,0 +1,25 @@
+mixin postDetailSidebar
+  .blog-detail__news
+    h3.blog-detail__title Bài viết mới nhất
+    ul.post-news
+      each val in postNewData
+        li
+          .post-news__img
+            img(src=`${val.thumbnail}`, alt="Post")
+          .post-news__body
+            h4
+              a(href="#") #{ val.title }
+            span #{ val.public }
+  .blog-detail__tags
+    h3.blog-detail__title Blog tags
+    ul
+      each val in tagProduct
+        li
+          a(href=`${val.hef}`) #{ val.anchor }
+  .blog-detail__video
+    h3.blog-detail__title Latest video
+    button.btn-video
+      .blog-detail__video-wrapper
+        img(src="../images/blog-detail-video.png", alt="Video")
+        span
+          i.fas.fa-play

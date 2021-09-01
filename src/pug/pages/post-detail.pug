@@ -1,0 +1,42 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is Post Detail Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+    	{
+    		href: "#", 
+    		anchor: "Trang chủ"
+    	},
+    	{
+    		href: "#", 
+    		anchor: "Blog"
+    	}
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/post
+  include ../components/form
+  include ../blocks/post-detail/post-comment
+  include ../blocks/post-detail/post-sidebar
+
+block append includes
+  include ../constants/posts
+  include ../constants/tag
+  include ../constants/comment
+
+block main
+  main.blog-detail
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Blog")
+      .row
+        .col-lg-9.order-lg-2
+          .blog-detail__body
+            +postDetail(postDetailData)
+            +postDetailComments
+        .col-lg-3
+          +postDetailSidebar

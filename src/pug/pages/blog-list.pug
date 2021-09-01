@@ -1,0 +1,34 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This Product Blog List Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+      {
+        href: "#", 
+        anchor: "Trang chủ"
+      },
+      {
+        href: "#", 
+        anchor: "Blog"
+      }
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/post
+
+block append includes
+  include ../constants/posts
+
+block main
+  main.blog-list-page
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Blog")
+      .row
+        each val in postBlogData
+          .col-lg-4.col-md-6.col-xs-12
+            +postItem(val)

@@ -1,0 +1,7 @@
+mixin commentBlogDetail(props)
+  li.comment-item
+    .comment-infos
+      span.comment-author Bình luận bởi #{ props.author }
+      span.comment-date Cách đây #{ props.time }
+      a.comment-action.float-right(href="#") Trả lời
+    p.comment-content #{ props.content }
