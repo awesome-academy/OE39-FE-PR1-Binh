@@ -1,0 +1,75 @@
+.signin {
+  margin-top: 1.5rem;
+  margin-bottom: 8rem;
+
+  .title {
+    margin-top: 2.6rem;
+    .heading__title {
+      font-size: 2.4rem;
+      color: $title-text;
+    }
+  }
+
+  .heading {
+    display: inline-block;
+  }
+}
+
+.signin-head,
+.signup-head {
+  a {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+.signin-body,
+.signup-body {
+  width: 100%;
+  padding: 4rem 5.5rem;
+  border: 1px solid $border-color-main;
+}
+
+.signin-title,
+.signup-title {
+  font-size: 1.8rem;
+  color: $dark-text;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.signin-desc {
+  margin-bottom: 4rem;
+}
+
+@include mq("xl", "max") {
+  .signin-body,
+  .signup-body {
+    padding: 0;
+    border: 0;
+  }
+}
+
+@include mq("lg", "max") {
+  .signin {
+    margin-bottom: 4rem;
+
+    .title {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      .heading__title {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .signin-title {
+    margin-bottom: 1rem;
+  }
+
+  .signin-desc {
+    margin-bottom: 2rem;
+  }
+}

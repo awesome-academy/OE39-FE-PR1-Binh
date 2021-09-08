@@ -1,0 +1,45 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is Signup Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+    	{
+    		href: "#", 
+    		anchor: "Trang chủ"
+    	},
+    	{
+    		href: "#", 
+    		anchor: "Đăng ký"
+    	}
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/form
+
+block append includes
+
+block main
+  main.signup
+    .container
+      +breadcrumb(breadcrumbData)
+      .signup-head
+        +title("Đăng ký")
+        a.btn.btn-primary.float-right(href="#") Đăng nhập
+      .row
+        .signup-body
+          .col-lg-12
+            h3.signup-title Thông tin cá nhân
+            form.signup-action(action="#")
+              +inputHorizontal("first-name", "text", "Tên trước", "", false, true)
+              +inputHorizontal("last-name", "text", "Tên sau", "", false, true)
+              +inputHorizontal("email", "email", "Email", "", false, true)
+              +inputHorizontal("username", "text", "Username", "", false, true)
+              +checkboxHorizontal("isDefault", "checkbox", "Đăng ký nhận bản tin")
+              h3.signup-title Thông tin đăng nhập
+              +inputHorizontal("password", "password", "Mật khẩu", "", false, true)
+              +inputHorizontal("confirm-password", "password", "Xác nhận mật khẩu", "", false, true)
+              +buttonHorizontalForm("Gửi", "Quay lại")
