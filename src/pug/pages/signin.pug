@@ -1,0 +1,41 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is Signin Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+    	{
+    		href: "#", 
+    		anchor: "Trang chủ"
+    	},
+    	{
+    		href: "#", 
+    		anchor: "Đăng nhập"
+    	}
+    ]
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/form
+
+block append includes
+
+block main
+  main.signin
+    .container
+      +breadcrumb(breadcrumbData)
+      .signin-head
+        +title("Đăng nhập")
+        a.btn.btn-primary.float-right(href="#") Đăng ký
+      .row
+        .signin-body
+          h3.signin-title Khách hàng đăng nhập
+          p.signin-desc Nếu bạn có tài khoản, xin vui lòng đăng nhập
+          .col-lg-12
+            form.signin-action(action="#")
+              +inputHorizontal("email", "email", "Email", "", false, true)
+              +inputHorizontal("password", "password", "Password", "", false, true)
+              +checkboxHorizontal("isDefault", "checkbox", "Ghi nhớ tài khoản")
+              +buttonItemForm("Đăng nhập")
+              +buttonLinkForm("Quên mật khẩu", "float-left")
