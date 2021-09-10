@@ -45,12 +45,12 @@ mixin textareaHorizontal(name="", placeholder="", value="", rows="3", cols="10",
         cols=`${cols}`
       )
 
-mixin buttonHorizontalForm
+mixin buttonHorizontalForm(textOne="Chỉnh sửa địa chỉ", textTwo="Xóa")
   .form-group.row
     .col-sm-2
     .col-sm-10
-      button.btn.btn-secondary(type="submit") Chỉnh sửa địa chỉ
-      button.btn.btn-primary(type="submit") Xóa
+      button.btn.btn-secondary(type="submit") #{ textOne }
+      button.btn.btn-primary(type="submit") #{ textTwo }
 
 mixin buttonLinkForm(content="Chỉnh sửa địa chỉ", float="float-right")
   .form-group.row
