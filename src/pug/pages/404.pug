@@ -1,0 +1,45 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is 404 Page';
+  - bodyClass = 'page-wrapper';
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+  include ../components/form
+
+block append includes
+  include ../components/form
+
+block main
+  main.page-404
+    .page-404__notify
+      .page-404__wrapper
+        .container
+          .row
+            .col-lg-5
+            .col-lg-7
+              img(src="../images/bg-404.png", alt="Test")
+      .page-404__media
+        img(src="../images/banner-404.png", alt="Banner")
+      .page-404__body
+        h1.page-404__head Lỗi
+        .page-404__content
+          h3.page-404__title Đây không phải là
+          span.page-404__desc trang web bạn tìm kiếm
+
+    .page-404__main
+      .container
+        .row
+          .col-lg-8.offset-lg-2.page-404__main-wrapper
+            .page-404__logo 
+              img(src="../images/logo-404.png", alt="Logo")
+            ul.page-404__menu
+              li
+                a(href="#") Trang chủ
+              li
+                a(href="#") Liên hệ
+              li
+                input.page-404__input(type="text")
+                i.fas.fa-search
