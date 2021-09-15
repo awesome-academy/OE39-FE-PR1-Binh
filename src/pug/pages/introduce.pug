@@ -1,0 +1,34 @@
+extends ../layouts/default-layout
+
+block vars
+  - title = 'This is introduce Page';
+  - bodyClass = 'page-wrapper';
+  -
+    const breadcrumbData = [
+    	{
+    		href: "#", 
+    		anchor: "Trang chủ"
+    	},
+    	{
+    		href: "#", 
+    		anchor: "Giới thiệu"
+    	}
+    ]
+
+block append mixins
+  include ../components/breadcrumb
+  include ../components/heading
+
+block append includes
+
+block main
+  main.introduce
+    .container
+      +breadcrumb(breadcrumbData)
+      +title("Giới thiệu")
+      .row
+        .col-lg-5
+          img.introduce__banner(src="../images/banner-introduce.png", alt="Banner")
+        .col-lg-7
+          h1.introduce__title Chào mừng đến với Wine Hourse
+          p.introduce__desc Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...
